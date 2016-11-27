@@ -16,9 +16,10 @@ module.exports = function(body) {
     notification.title = `${data.pusher}`;
     notification.message = `just pushed to ${data.repo_name}`;
     notification.icon = data.avatar;
-    // notification.open = data.compare_link;
+    notification.open = data.compare_link;
     notification.actions = 'Pull';
     notification.closeLabel = 'Dismiss';
+    notification.wait = true;
     // notification.dropdownLabel = 'Pull';
 
     nc.notify(notification, function() {
