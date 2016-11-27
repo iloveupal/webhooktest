@@ -20,6 +20,7 @@ module.exports = function(body) {
     notification.actions = 'Pull';
     notification.closeLabel = 'Dismiss';
     notification.wait = true;
+    notification.sound = 'Funk';
     // notification.dropdownLabel = 'Pull';
 
     nc.notify(notification, function() {
