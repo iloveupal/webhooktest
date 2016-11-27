@@ -1,5 +1,6 @@
 const prettyjson = require('prettyjson');
 const notifier = require('node-notifier');
+const nc = new notifier.NotificationCenter();
 
 module.exports = function(body) {
     var data = {};
@@ -17,8 +18,9 @@ module.exports = function(body) {
     notification.icon = data.avatar;
     notification.open = data.compare_link;
     notification.actions = 'Pull';
+    // notification.dropdownLabel = 'Pull';
 
-    notifier.notify(notification, function() {
+    nc.notify(notification, function() {
         console.log('callback');
         console.log(arguments);
     });
