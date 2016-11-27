@@ -12,7 +12,7 @@ module.exports = function(body) {
     var notification = {};
 
     notification.title = `${data.pusher}`;
-    notification.message = `just pushed commit to ${data.repo_name}`;
+    notification.message = `just pushed to ${data.repo_name}`;
     notification.icon = data.avatar;
 
     notifier.notify(notification);
