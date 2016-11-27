@@ -1,11 +1,12 @@
-var app = require('express')();
+const app = require('express')();
 
-var prettyjson = require('prettyjson');
+
+const notify = require('./notify');
 
 app.use(require('body-parser').json());
 
 app.post('/payload', function(req, res) {
-    console.log(prettyjson.render(req.body));
+    notify(req.body);
     res.send('ok');
 });
 
