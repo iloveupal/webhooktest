@@ -16,7 +16,7 @@ module.exports = function(body) {
     notification.message = `just pushed to ${data.repo_name}`;
     notification.icon = data.avatar;
     notification.open = data.compare_link;
-    notification.actions = ['Pull'];
+    notification.actions = 'Pull';
 
     notifier.notify(notification, function() {
         console.log('callback');
